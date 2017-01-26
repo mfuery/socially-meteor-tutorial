@@ -1,0 +1,17 @@
+<p>
+  <a [routerLink]="['/']">&lt; back</a>
+</p>
+
+<form *ngIf="party" (submit)="saveParty()">
+  <label>Name</label>
+  <input type="text" [(ngModel)]="party.name" name="name">
+  <p>{{ party.name }}</p>
+
+  <label>Description</label>
+  <input type="text" [(ngModel)]="party.description" name="description">
+
+  <label>Location</label>
+  <input type="text" [(ngModel)]="party.location" name="location">
+
+  <button type="submit">Save</button>
+</form>
